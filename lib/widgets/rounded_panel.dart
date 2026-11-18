@@ -9,14 +9,18 @@ class RoundedPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final style = context.homeBookStyles;
+    final style = context.homeBookColors;
 
     return DecoratedBox(
       decoration: BoxDecoration(
+        border: Border.all(color: style.glassBorder, width: 1),
         color: style.glass,
-        borderRadius: BorderRadius.all(Radius.circular(0.5)),
+        borderRadius: BorderRadius.all(Radius.circular(40)),
       ),
-      child: child,
+      child: Padding(
+        padding: const EdgeInsets.all(25.0),
+        child: child,
+      ),
     );
   }
 }

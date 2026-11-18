@@ -10,7 +10,7 @@ class Backdrop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final style = context.homeBookStyles;
+    final style = context.homeBookColors;
 
     return DecoratedBox(
       decoration: BoxDecoration(color: style.canvas),

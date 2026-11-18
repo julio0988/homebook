@@ -309,5 +309,5 @@ class HomebookColors extends ThemeExtension<HomebookColors> {
 }
 
 extension HomebookContext on BuildContext {
-  HomebookColors get homeBookStyles => Theme.of(this).extension<HomebookColors>()!;
+  HomebookColors get homeBookColors => Theme.of(this).extension<HomebookColors>()!;
 }

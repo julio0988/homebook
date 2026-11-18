@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
 
-class ResponsibleSelector extends StatelessWidget {
+import '../../widgets/segmented_buttons.dart';
+
+class ResponsibleSelector extends StatefulWidget {
   const ResponsibleSelector({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return ToggleButtons(
-      isSelected: [true, true, false],
-      borderRadius: BorderRadius.circular(100),
+  State<ResponsibleSelector> createState() => _ResponsibleSelectorState();
+}
 
-      children: [Text("All"), Text("Julio"), Text("Alana")],
+class _ResponsibleSelectorState extends State<ResponsibleSelector> {
+  String _selected = "All";
+
+  @override
+  Widget build(BuildContext context) {
+    return HomeBookSegmentedButtons(
+      segments: ["All", "Julio", "Alana"],
+      onChange: (selected) => setState(() => _selected = selected),
+      selected: _selected,
     );
   }
 }
