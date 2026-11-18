@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:homebook/screens/home/home.dart';
+import 'package:homebook/styles/theme.dart';
 
 void main() {
   runApp(Homebook());
@@ -12,9 +14,11 @@ class Homebook extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: Text("Hello world", textDirection: TextDirection.ltr),
-      ),
+      title: 'Homebook',
+      theme: homebookTheme(Brightness.light),
+      darkTheme: homebookTheme(Brightness.dark),
+      themeMode: ThemeMode.system,
+      home: Home(),
     );
   }
 }
